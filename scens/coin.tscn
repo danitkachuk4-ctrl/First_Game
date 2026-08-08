@@ -1,0 +1,89 @@
+[gd_scene format=3 uid="uid://x56rbqqvvlo0"]
+
+[ext_resource type="Texture2D" uid="uid://cwpknwropclxx" path="res://AllSprites/gold_coin_row_transparent.png" id="1_cdgsb"]
+[ext_resource type="Script" uid="uid://bvr5flv4n4mbr" path="res://Screepts/coin.gd" id="1_dfily"]
+[ext_resource type="AudioStream" uid="uid://2hbypn12sggr" path="res://Music/CoinSound.mp3" id="3_63n5c"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dfily"]
+size = Vector2(19, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rsto"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(10, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmy7k"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(26, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_730qv"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(42, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyicg"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(58, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2y6y"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(74, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1o51"]
+atlas = ExtResource("1_cdgsb")
+region = Rect2(90, 0, 16, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_63n5c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rsto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmy7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_730qv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyicg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2y6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1o51")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 10.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cdgsb"]
+radius = 8.0
+
+[node name="Coin" type="CharacterBody2D" unique_id=1188255232]
+collision_layer = 0
+script = ExtResource("1_dfily")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=953368990]
+position = Vector2(-1.5, 2)
+shape = SubResource("RectangleShape2D_dfily")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=172955769]
+scale = Vector2(1.3333333, 1.3333334)
+sprite_frames = SubResource("SpriteFrames_63n5c")
+animation = &"Idle"
+autoplay = "Idle"
+
+[node name="Detector" type="Area2D" parent="." unique_id=908677528]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detector" unique_id=721409863]
+position = Vector2(-1, -1)
+shape = SubResource("CircleShape2D_cdgsb")
+
+[node name="CoinSound" type="AudioStreamPlayer" parent="." unique_id=591258188]
+stream = ExtResource("3_63n5c")
+volume_db = -10.0
+
+[connection signal="body_entered" from="Detector" to="." method="_on_detector_body_entered"]

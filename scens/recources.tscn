@@ -1,0 +1,118 @@
+[gd_scene format=3 uid="uid://4ojohuh114f"]
+
+[ext_resource type="Script" uid="uid://b6yhf1hxfpum6" path="res://Screepts/recources.gd" id="1_gu65l"]
+[ext_resource type="Texture2D" uid="uid://wn377n8c31mc" path="res://AllSprites/Coins.png" id="1_krqqc"]
+[ext_resource type="FontFile" uid="uid://d2whm0h8ai0hn" path="res://KiwiSoda.ttf" id="2_gu65l"]
+[ext_resource type="Texture2D" uid="uid://cgomjm4vlxub0" path="res://AllSprites/Food.png" id="3_pgfng"]
+[ext_resource type="Texture2D" uid="uid://dor0e0do5fm6a" path="res://AllSprites/Armor.png" id="5_0dpb6"]
+[ext_resource type="Texture2D" uid="uid://urib3jqq0qb3" path="res://AllSprites/Sworld.png" id="6_31rhe"]
+[ext_resource type="Texture2D" uid="uid://t4ewj10n43t3" path="res://AllSprites/Heart.png" id="6_u0r5e"]
+[ext_resource type="AudioStream" uid="uid://cv0m2h0cekt2k" path="res://Music/Buy.mp3" id="7_u0r5e"]
+
+[node name="Recources" type="CanvasLayer" unique_id=1932216401]
+layer = 10
+script = ExtResource("1_gu65l")
+
+[node name="Control" type="Control" parent="." unique_id=69343680]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.07999969)
+
+[node name="PanelContainer" type="PanelContainer" parent="Control" unique_id=1733100241]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -94.26904
+offset_top = 300.0
+offset_right = 125.73096
+offset_bottom = 340.0
+grow_horizontal = 2
+scale = Vector2(1.16, 11.340046)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/PanelContainer" unique_id=1177611791]
+layout_mode = 2
+
+[node name="Coin" type="TextureRect" parent="Control/PanelContainer/HBoxContainer" unique_id=1468250905]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("1_krqqc")
+expand_mode = 2
+
+[node name="CoinText" type="Label" parent="Control/PanelContainer/HBoxContainer" unique_id=575251888]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+theme_override_fonts/font = ExtResource("2_gu65l")
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Food" type="TextureRect" parent="Control/PanelContainer/HBoxContainer" unique_id=348746985]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_pgfng")
+expand_mode = 2
+
+[node name="FoodText" type="Label" parent="Control/PanelContainer/HBoxContainer" unique_id=592016197]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Armor" type="TextureRect" parent="Control/PanelContainer/HBoxContainer" unique_id=1825878779]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("5_0dpb6")
+expand_mode = 2
+
+[node name="ArmorText" type="Label" parent="Control/PanelContainer/HBoxContainer" unique_id=951373473]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Damage" type="TextureRect" parent="Control/PanelContainer/HBoxContainer" unique_id=238948566]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_31rhe")
+expand_mode = 2
+
+[node name="DamageText" type="Label" parent="Control/PanelContainer/HBoxContainer" unique_id=244029347]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MaxHealth" type="TextureRect" parent="Control/PanelContainer/HBoxContainer" unique_id=226207092]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("6_u0r5e")
+expand_mode = 2
+
+[node name="MaxHealthText" type="Label" parent="Control/PanelContainer/HBoxContainer" unique_id=414825122]
+layout_mode = 2
+size_flags_horizontal = 3
+offset_transform_enabled = true
+offset_transform_scale = Vector2(2, 2)
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BuySound" type="AudioStreamPlayer" parent="." unique_id=241690753]
+stream = ExtResource("7_u0r5e")

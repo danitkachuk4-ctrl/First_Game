@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://bgv1yibw227kg"]
+
+[ext_resource type="Script" uid="uid://snb2hs4geuug" path="res://Mobs/mobs_health.gd" id="1_krc2m"]
+
+[node name="MobsHealth" type="Node2D" unique_id=772162150]
+script = ExtResource("1_krc2m")
+
+[node name="DamageText" type="Label" parent="." unique_id=413958435]
+offset_right = 50.434784
+offset_bottom = 29.0
+theme_override_colors/font_color = Color(0.97801715, 0.36576447, 0.3322172, 1)
+theme_override_font_sizes/font_size = 20
+text = "20"
+horizontal_alignment = 1

@@ -1,0 +1,250 @@
+[gd_scene format=3 uid="uid://b823hbcsf5rb7"]
+
+[ext_resource type="Script" uid="uid://csfqy5qcf7qrs" path="res://Screepts/menu.gd" id="1_p7q78"]
+[ext_resource type="PackedScene" uid="uid://b4grlio728c08" path="res://scens/back_graund.tscn" id="2_6df8o"]
+[ext_resource type="FontFile" uid="uid://d2whm0h8ai0hn" path="res://KiwiSoda.ttf" id="2_m6sb0"]
+[ext_resource type="Script" uid="uid://ct27i53q7ljus" path="res://Screepts/back_graund.gd" id="3_m6sb0"]
+[ext_resource type="Texture2D" uid="uid://v52h7sfnfubl" path="res://AllSprites/Cat-1/Cat-1-Itch.png" id="4_nj411"]
+[ext_resource type="Texture2D" uid="uid://bigxroftgy5s8" path="res://AllSprites/Cat-1/Hill.png" id="5_0kgw4"]
+[ext_resource type="Texture2D" uid="uid://bsbqjpuejgw45" path="res://AllSprites/Cat-1/Cat-1-Walk.png" id="6_54d5r"]
+[ext_resource type="AudioStream" uid="uid://dkyiv6mglx1s3" path="res://Music/ButtonSaund.mp3" id="7_54d5r"]
+[ext_resource type="AudioStream" uid="uid://cjsdcca5srlw0" path="res://Music/MusicMenu.mp3" id="8_5ismp"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4koa1"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eemv"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8qad"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_31w3f"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b5mar"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y8s4h"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n08x3"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ns6ii"]
+atlas = ExtResource("6_54d5r")
+region = Rect2(350, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nj411"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4koa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eemv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8qad")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_31w3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b5mar")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y8s4h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n08x3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ns6ii")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 8.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oyte3"]
+atlas = ExtResource("4_nj411")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlo1c"]
+atlas = ExtResource("4_nj411")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oyte3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlo1c")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="Theme" id="Theme_0kgw4"]
+default_font = ExtResource("2_m6sb0")
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_weteh"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l1oxq"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cakml"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4qaiy"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_urj3e"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6b5mm"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ac57v"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oq2xj"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(350, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ihqgu"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(400, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0ucn0"]
+atlas = ExtResource("5_0kgw4")
+region = Rect2(450, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ismp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_weteh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l1oxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cakml")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4qaiy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_urj3e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6b5mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ac57v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oq2xj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ihqgu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0ucn0")
+}],
+"loop": 1,
+"name": &"new_animation",
+"speed": 8.0
+}]
+
+[node name="Menu" type="Node2D" unique_id=1076671699]
+script = ExtResource("1_p7q78")
+
+[node name="Play" type="Button" parent="." unique_id=1471376370]
+offset_left = 460.0
+offset_top = 121.775
+offset_right = 696.0
+offset_bottom = 215.775
+theme_override_fonts/font = ExtResource("2_m6sb0")
+theme_override_font_sizes/font_size = 50
+text = "PLAY"
+
+[node name="CatWalk" type="AnimatedSprite2D" parent="Play" unique_id=204492029]
+position = Vector2(104, -24.999992)
+scale = Vector2(2.901, 3.631)
+sprite_frames = SubResource("SpriteFrames_nj411")
+animation = &"new_animation"
+frame_progress = 0.45633748
+
+[node name="Load" type="Button" parent="." unique_id=111801756]
+offset_left = 461.0
+offset_top = 283.0
+offset_right = 697.0
+offset_bottom = 383.0
+theme_override_font_sizes/font_size = 50
+text = "LOAD"
+
+[node name="Caat" type="AnimatedSprite2D" parent="Load" unique_id=1233555297]
+position = Vector2(109, -25)
+scale = Vector2(2.9, 3.6)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.8528462
+
+[node name="Quit" type="Button" parent="." unique_id=124129483]
+offset_left = 459.0
+offset_top = 463.0
+offset_right = 695.0
+offset_bottom = 557.0
+theme = SubResource("Theme_0kgw4")
+theme_override_font_sizes/font_size = 50
+text = "QUIT"
+
+[node name="CatHiss" type="AnimatedSprite2D" parent="Quit" unique_id=1507470834]
+position = Vector2(100, -25)
+scale = Vector2(2.901057, 3.6309528)
+sprite_frames = SubResource("SpriteFrames_5ismp")
+animation = &"new_animation"
+frame_progress = 0.4421784
+
+[node name="BackGraund" parent="." unique_id=1197737685 instance=ExtResource("2_6df8o")]
+script = ExtResource("3_m6sb0")
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=509158443]
+stream = ExtResource("7_54d5r")
+volume_db = -10.0
+
+[node name="MusicMenu" type="AudioStreamPlayer" parent="." unique_id=435884448]
+stream = ExtResource("8_5ismp")
+volume_db = -10.0
+autoplay = true
+
+[connection signal="mouse_entered" from="Play" to="." method="_on_play_mouse_entered"]
+[connection signal="mouse_exited" from="Play" to="." method="_on_play_mouse_exited"]
+[connection signal="pressed" from="Play" to="." method="_on_play_pressed"]
+[connection signal="mouse_entered" from="Load" to="." method="_on_load_mouse_entered"]
+[connection signal="mouse_exited" from="Load" to="." method="_on_load_mouse_exited"]
+[connection signal="pressed" from="Load" to="." method="_on_load_pressed"]
+[connection signal="mouse_entered" from="Quit" to="." method="_on_quit_mouse_entered"]
+[connection signal="mouse_exited" from="Quit" to="." method="_on_quit_mouse_exited"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_play_pressed"]

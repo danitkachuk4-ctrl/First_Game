@@ -1,0 +1,200 @@
+[gd_scene format=3 uid="uid://cxrt3kbrtk10u"]
+
+[ext_resource type="Script" uid="uid://2fluefjla5gc" path="res://Build/shop_menu.gd" id="1_f8gav"]
+[ext_resource type="Texture2D" uid="uid://cglsy6o4cfod2" path="res://AllSprites/ShopMenu.png" id="1_u8hot"]
+[ext_resource type="Texture2D" uid="uid://btkxtr0ixbx1n" path="res://AllSprites/KNOPKA.png" id="2_xn0n2"]
+[ext_resource type="Texture2D" uid="uid://duncad08ur2pr" path="res://AllSprites/KNOPKA_PRESS.png" id="3_f8gav"]
+[ext_resource type="Texture2D" uid="uid://brucvcw4q25w4" path="res://AllSprites/KNOPKA_HOVER.png" id="4_qejid"]
+[ext_resource type="Texture2D" uid="uid://cwpknwropclxx" path="res://AllSprites/gold_coin_row_transparent.png" id="6_qnwxh"]
+[ext_resource type="AudioStream" uid="uid://dkyiv6mglx1s3" path="res://Music/ButtonSaund.mp3" id="7_r5yg5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1rsto"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(10, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmy7k"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(26, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_730qv"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(42, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tyicg"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(58, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y2y6y"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(74, 0, 16, 15)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h1o51"]
+atlas = ExtResource("6_qnwxh")
+region = Rect2(90, 0, 16, 15)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g4v7s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1rsto")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmy7k")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_730qv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tyicg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y2y6y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h1o51")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 10.0
+}]
+
+[node name="ShopMenu" type="CanvasLayer" unique_id=552409230]
+layer = 10
+script = ExtResource("1_f8gav")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=577784141]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(28.794, 16.16)
+mouse_filter = 1
+color = Color(0.19937289, 0.19937274, 0.19937277, 0.627451)
+
+[node name="Sprite2D" type="Sprite2D" parent="ColorRect" unique_id=1584926589]
+position = Vector2(19.95225, 18.24516)
+scale = Vector2(0.043751664, 0.07424734)
+texture = ExtResource("1_u8hot")
+
+[node name="Buttons" type="VBoxContainer" parent="ColorRect" unique_id=488832054]
+layout_mode = 0
+offset_left = 13.891781
+offset_top = 9.591585
+offset_right = 69.01384
+offset_bottom = 125.59158
+scale = Vector2(0.055, 0.119)
+
+[node name="Buy" type="TextureButton" parent="ColorRect/Buttons" unique_id=1971971565]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_xn0n2")
+texture_pressed = ExtResource("3_f8gav")
+texture_hover = ExtResource("4_qejid")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ColorRect/Buttons/Buy" unique_id=240006998]
+position = Vector2(36.581017, 14.094175)
+scale = Vector2(0.79547715, 0.68350637)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.7032789
+
+[node name="Buy" type="Label" parent="ColorRect/Buttons/Buy" unique_id=7707164]
+layout_mode = 0
+offset_left = 7.015551
+offset_top = 7.047083
+offset_right = 47.015553
+offset_bottom = 23.047083
+text = "  5"
+
+[node name="Buy2" type="TextureButton" parent="ColorRect/Buttons" unique_id=1073726915]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_xn0n2")
+texture_pressed = ExtResource("3_f8gav")
+texture_hover = ExtResource("4_qejid")
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="ColorRect/Buttons/Buy2" unique_id=770847142]
+position = Vector2(37.082115, 14.3552)
+scale = Vector2(0.79547715, 0.6835064)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.5792101
+
+[node name="Buy" type="Label" parent="ColorRect/Buttons/Buy2" unique_id=1585756125]
+layout_mode = 0
+offset_left = 7.015551
+offset_top = 7.047083
+offset_right = 47.015553
+offset_bottom = 23.047083
+text = "  5"
+
+[node name="Buy3" type="TextureButton" parent="ColorRect/Buttons" unique_id=372420536]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_xn0n2")
+texture_pressed = ExtResource("3_f8gav")
+texture_hover = ExtResource("4_qejid")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="ColorRect/Buttons/Buy3" unique_id=1832843441]
+position = Vector2(37.082123, 14.61621)
+scale = Vector2(0.79547715, 0.6835064)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.03418971
+
+[node name="Buy" type="Label" parent="ColorRect/Buttons/Buy3" unique_id=1207902716]
+layout_mode = 0
+offset_left = 7.015551
+offset_top = 7.047083
+offset_right = 47.015553
+offset_bottom = 23.047083
+text = " 10"
+
+[node name="Buy4" type="TextureButton" parent="ColorRect/Buttons" unique_id=1857630915]
+layout_mode = 2
+mouse_filter = 1
+texture_normal = ExtResource("2_xn0n2")
+texture_pressed = ExtResource("3_f8gav")
+texture_hover = ExtResource("4_qejid")
+
+[node name="AnimatedSprite2D3" type="AnimatedSprite2D" parent="ColorRect/Buttons/Buy4" unique_id=1680489749]
+position = Vector2(37.082123, 14.61621)
+scale = Vector2(0.79547715, 0.6835064)
+sprite_frames = SubResource("SpriteFrames_g4v7s")
+frame_progress = 0.03418971
+
+[node name="Buy" type="Label" parent="ColorRect/Buttons/Buy4" unique_id=103157491]
+layout_mode = 0
+offset_left = 7.015551
+offset_top = 7.047083
+offset_right = 47.015553
+offset_bottom = 23.047083
+text = " 8"
+
+[node name="Stats" type="VBoxContainer" parent="ColorRect" unique_id=1315762932]
+layout_mode = 0
+offset_left = 18.232964
+offset_top = 9.9009905
+offset_right = 91.80474
+offset_bottom = 87.90099
+scale = Vector2(0.111, 0.173)
+theme_override_constants/separation = 10
+
+[node name="Armor" type="Label" parent="ColorRect/Stats" unique_id=1907809519]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Armor"
+
+[node name="MaxHealth" type="Label" parent="ColorRect/Stats" unique_id=980287329]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Max Health"
+
+[node name="Food" type="Label" parent="ColorRect/Stats" unique_id=278413624]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Food"
+
+[node name="Damage" type="Label" parent="ColorRect/Stats" unique_id=954340867]
+layout_mode = 2
+theme_override_font_sizes/font_size = 12
+text = "Damage"
+
+[node name="ButtonSound" type="AudioStreamPlayer" parent="." unique_id=165537643]
+stream = ExtResource("7_r5yg5")
+volume_db = -10.0

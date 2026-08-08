@@ -1,0 +1,7 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Godot exported builds
+*.exe
+The Knight's Kingdom/The Knight's Kingdom.exe

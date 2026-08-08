@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://c2lphjfe0niei"]
+
+[ext_resource type="Script" uid="uid://ckir2gqtkvux2" path="res://Screepts/stats.gd" id="1_i3vwx"]
+[ext_resource type="Texture2D" uid="uid://cgfkph1ldit7" path="res://AllSprites/healthbar_progress_blood_67x10.png" id="1_iejqy"]
+[ext_resource type="Texture2D" uid="uid://2bgolpra3pwg" path="res://AllSprites/SkulsEmpty.png" id="2_i3vwx"]
+
+[node name="Stats" type="CanvasLayer" unique_id=1129267923]
+layer = 10
+script = ExtResource("1_i3vwx")
+
+[node name="HealthBar" type="TextureProgressBar" parent="." unique_id=1950414451]
+offset_left = 68.0
+offset_top = 38.0
+offset_right = 285.0
+offset_bottom = 75.0
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("1_iejqy")
+
+[node name="Ramka" type="TextureProgressBar" parent="HealthBar" unique_id=1723124018]
+layout_mode = 0
+offset_left = -101.0
+offset_top = -38.0
+offset_right = 339.48325
+offset_bottom = 74.0
+min_value = -20.0
+step = 20.0
+value = 100.0
+nine_patch_stretch = true
+texture_over = ExtResource("2_i3vwx")
+texture_progress_offset = Vector2(-19.82, -4.64)

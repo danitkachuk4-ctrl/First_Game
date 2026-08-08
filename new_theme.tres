@@ -1,0 +1,16 @@
+[gd_resource type="Theme" format=3 uid="uid://cbshtlrtcvvws"]
+
+[ext_resource type="FontFile" uid="uid://d2whm0h8ai0hn" path="res://KiwiSoda.ttf" id="1_i7eh4"]
+[ext_resource type="Texture2D" uid="uid://dfx16nbaaybmf" path="res://AllSprites/ribbon_red_banner_wide.png" id="2_78ylj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4xfx7"]
+texture = ExtResource("2_78ylj")
+expand_margin_left = 35.0
+expand_margin_top = 5.0
+expand_margin_right = 35.0
+expand_margin_bottom = 20.0
+
+[resource]
+default_font = ExtResource("1_i7eh4")
+Label/fonts/font = ExtResource("1_i7eh4")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_4xfx7")

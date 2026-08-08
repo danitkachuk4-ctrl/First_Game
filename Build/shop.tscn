@@ -1,0 +1,97 @@
+[gd_scene format=3 uid="uid://chaf1ivrnm87n"]
+
+[ext_resource type="Script" uid="uid://o140cymqvw6" path="res://Build/shop.gd" id="1_jxx1l"]
+[ext_resource type="Texture2D" uid="uid://ceow7078t8jxy" path="res://AllSprites/SHOOOOP2.png" id="1_lpta5"]
+[ext_resource type="AudioStream" uid="uid://bgvskg6w2ym4l" path="res://Music/OpenShop.mp3" id="3_vhfrg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jxx1l"]
+radius = 209.61154
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lpta5"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(0, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxx1l"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(120, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vhfrg"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(240, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ndq8e"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(360, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_83exo"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(480, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n27ny"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(600, 0, 120, 240)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6r1qa"]
+atlas = ExtResource("1_lpta5")
+region = Rect2(720, 0, 120, 240)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_voc1y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lpta5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxx1l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vhfrg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ndq8e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_83exo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n27ny")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6r1qa")
+}],
+"loop": 1,
+"name": &"Shop",
+"speed": 8.0
+}]
+
+[node name="Shop" type="Area2D" unique_id=973870550]
+collision_mask = 2
+script = ExtResource("1_jxx1l")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1977434782]
+position = Vector2(4, 55)
+shape = SubResource("CircleShape2D_jxx1l")
+
+[node name="Label" type="Label" parent="CollisionShape2D" unique_id=1209779350]
+z_index = 11
+offset_left = -97.000015
+offset_top = -77.0
+offset_right = 5.9999847
+offset_bottom = -61.0
+scale = Vector2(1.73, 1.73)
+text = "Push button \"E\""
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=552980889]
+position = Vector2(12, -41)
+scale = Vector2(1.933073, 1.8207301)
+sprite_frames = SubResource("SpriteFrames_voc1y")
+animation = &"Shop"
+autoplay = "Shop"
+frame = 2
+frame_progress = 0.054722283
+
+[node name="OpenSound" type="AudioStreamPlayer" parent="." unique_id=369588109]
+stream = ExtResource("3_vhfrg")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_exited" from="." to="." method="_on_body_exited"]
