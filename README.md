@@ -33,7 +33,7 @@ Below are all the mobs you'll face as the days go on:
 
 ### Or just click here ⬇️
 
-[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen?style=for-the-badge)](https://github.com/danitkachuk4-ctrl/First_Game05/releases/tag/v1.0)
+[![Download](https://img.shields.io/badge/Download-v1.0-brightgreen?style=for-the-badge)](https://github.com/danitkachuk4-ctrl/First_Game/releases/tag/v1.0)
 
 </div>
 
