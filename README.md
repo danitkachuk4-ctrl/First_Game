@@ -29,7 +29,7 @@ Below are all the mobs you'll face as the days go on:
 2. Download the latest `.exe` file (`The Knight's Kingdom v1.0`)
 3. Run the downloaded file to start playing
 
- <div align="center">
+<div align="center">
 
 ### Or just click here ⬇️
 
