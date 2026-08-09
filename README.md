@@ -40,7 +40,7 @@ Below are all the mobs you'll face as the days go on:
 ## Built With:
 
 - [Godot Engine](https://godotengine.org/) — game engine
-- [itch.io](https://itch.io/) — hosting/distribution
+- [itch.io](https://itch.io/) — sprites
 - [Pixelorama](https://orama-interactive.itch.io/pixelorama) — pixel art tool
 
  > Note: all other game assets and source files are included directly in this repository, but the executable is distributed separately through Releases.
